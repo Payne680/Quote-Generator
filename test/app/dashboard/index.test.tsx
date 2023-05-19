@@ -12,4 +12,21 @@ describe('Dashboard page', () => {
 
         expect(header).toHaveTextContent(headerText);
     });
+
+    it('Should have a disable button', () => {
+        render(<DashboardIndexPage />);
+        
+        const buttonElement = screen.getByRole('button');
+
+        expect(buttonElement).toBeDisabled();
+
+    });
+
+    it('Should have a p tag with className blue', () => {
+        render(<DashboardIndexPage />);
+
+        const pElement = screen.getByTestId('paragraph-blue');
+
+        expect(pElement).toHaveClass('blue');
+    });
 });
