@@ -1,1 +1,1 @@
-# Quote Generator web app
+# Quote Generator web app, generating random quotes.
